@@ -66,9 +66,10 @@ if (c==""){
 // realizamos la suma 
 var resultado = a + b + c;
 //mostramos el resultado 
-document.getElementById("resultado").value = resultado;
-    }
- function resta(){
+document.getElementById("resultado").value = resultado}
+</script>
+<script>
+ function restar(){
      //capturar las variables 
 var a =parceInt (document.getElementById("a").value);
 var b =parceInt (document.getElementById("b").value);
@@ -97,8 +98,36 @@ if (c==""){
 // realizamos la resta
 var resultado= a - b - c;
 //mostramos el resultado 
-document.getElementById("resultado").value = resultado;
- }    
+document.getElementById("resultado").value = resultado;}  
+</script>
+<script>
+ function multiplicacion(a*b*c) {
+     //Captura las variables
+     var a =parseInt(document.getElementById("a").value) ;
+     var b =parseInt(document.getElementById("b").value) ;
+     var c =parseInt(document.getElementById("C").value) ;
+     //definimos las variables de salida
+     var resultado;
+     // verificar casillas 
+     if (a == ""){
+         a= 0
+     } else {
+         parseInt(a)
+     }
+     if (b == ""){
+         b= 0
+     } else {
+         parseInt(b)
+     }
+     if (c == ""){
+         c= 0 
+     } else {
+         parseInt(c)
+     }
+     // Realizamos la multiplicacion 
+     var resultado= a * b * c;
+     // mostramos el resultado 
+     document.getElementById("resultado"). value = resultado;}
 </script>
 
  </body>
