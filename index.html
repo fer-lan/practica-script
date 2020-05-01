@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta charset="UTF-8" > 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Captura de variables </title>
+ </head>
+ <body>
+     <style>body{background-color: rgb(192, 186, 167);} </style>
+    <style> h1{color:rgb(10, 32, 39)} </style>
+        <style> h1{width: 500px;} </style>
+<center>
+    <h1>Captura de Variables </h1>
+</center>
+<!--Estas es la solucion del problema-->
+<p>programa que resuelve problemas matemeaticos con 3 variables, al presionar sumar<br>
+suma la cifra de las 3 variables, al presionar restar toma el numero de la variable mayor<br>
+y el de la variable menor y los resta, al presionar mutiplicar multiplica la variante a y b<br>
+y al dividir divide el mayor de los 3 con el valor que esta al medio.   </p>
+<!--fase de analisis básico-->
+<p> los datos de entrada serán números enteros y daran números enteros.  </p>
+<p>Se realizaran operaciones matematicas con las variables.</p>
+<!--input´s para capturar las variables-->
+<label for="a">ingrese el primer valor númerico</label>
+<input type="number" id="a" name="a"> <br>
+<label for="b">ingrese el segundo valor númerico </label>
+<input type="number" id="b" name="b"><br>
+<label for="c">ingrese el tercer valor númerico </label>
+<input type="number" id="c" name="c"><br>
+<!--boton que llamara a la funcion desumar-->
+<button onclick="sumar()"> sumar</button><br>
+<button onclick="resta()"> restar</button><br>
+<button onclick="mul()"> multiplicar</button><br>
+<button onclick="dicidir()"> dividir</button><br>
+<!--campo que mostrara el resultado-->
+<label for="resultado">Resultado de las operaciones matemáicas</label>
+<input type="number" id="resultado" name="resultado">
+<script>
+    function sumar(){
+        //capturar documentos 
+var a =parseInt (document.getElementById("a").value);
+var b =parseInt (document.getElementById("b").value);
+var c =parseInt (document.getElementById("c").value);
+//definimos la variable de salida 
+var resultado;
+
+//verificar si las casillas de las variables esta en blanco
+if (a == "") {
+    a= 0
+} else {
+    parseInt(a) ;
+}
+
+if (b =="") {
+    b= 0
+} else {
+    parseInt(b) ;
+}
+
+if (c==""){
+    c= 0
+} else {
+    parseInt(c);
+}
+
+// realizamos la suma 
+var resultado = a + b + c;
+//mostramos el resultado 
+document.getElementById("resultado").value = resultado;
+    }
+ function resta(){
+     //capturar las variables 
+var a =parceInt (document.getElementById("a").value);
+var b =parceInt (document.getElementById("b").value);
+var c =parseInt (document.getElementById("c").value);
+//definimos las varibles de salida
+var resultado; 
+//verificar casillas
+if (a == "") {
+    a= 0
+} else {
+    parseInt(a) ;
+}
+
+if (b =="") {
+    b= 0
+} else {
+    parseInt(b) ;
+}
+
+if (c==""){
+    c= 0
+} else {
+    parseInt(c);
+}
+
+// realizamos la resta
+var resultado= a - b - c;
+//mostramos el resultado 
+document.getElementById("resultado").value = resultado;
+ }    
+</script>
+
+ </body>
+ </html>
